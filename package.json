@@ -1,0 +1,8 @@
+{
+  "name": "Jim",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/monkey-king-jim/Oauth2.git",
+  "author": "monkey-king-jim <57361690+monkey-king-jim@users.noreply.github.com>",
+  "license": "MIT"
+}
