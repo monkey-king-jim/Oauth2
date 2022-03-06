@@ -28,7 +28,16 @@ app.get("/api/auth/discord/redirect", async (req: Request, res: Response) => {
           },
         }
       );
-      console.log(response);
+      const { access_token } = response.data;
+      const { data: userResponse } = await axios.get(
+        "https://discord.com/api/v8/users/@me",
+        {
+          headers: {
+            Authorization: `Bearer ${access_token}`,
+          },
+        }
+      );
+      console.log(userResponse);
     } catch (err) {
       console.log(err);
       res.sendStatus(400);
